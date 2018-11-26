@@ -8,6 +8,15 @@
             "defines": ["__AVR_ATmega328P__"],
             "compilerPath": "/usr/bin/avr-gcc",
             "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": ["__AVR_ATmega328P__"],
+            "compilerPath": "/usr/local/CrossPack-AVR/bin/avr-gcc",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4
