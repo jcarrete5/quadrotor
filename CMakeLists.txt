@@ -7,5 +7,9 @@ include(avr-gcc-toolchain)
 
 project(quadrotor C)
 
+# Add local headers to include path
+include_directories(include)
+
+add_subdirectory(src/common)
 add_subdirectory(src/aircraft)
 add_subdirectory(src/controller)
