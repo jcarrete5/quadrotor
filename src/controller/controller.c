@@ -1,11 +1,16 @@
 #include <avr/io.h>
 #include <util/delay.h>
- 
+#include "serial.h"
+#include <stdio.h>
+
 #define BLINK_DELAY_MS 1000
- 
+
 int main(void)
 {
-    /* set pin 5 of PORTB for output*/
+    USART_init();
+    puts("FOOBAR");
+
+    /* set pin 5 of PORTB for output */
     DDRB |= _BV(DDB5);
 
     while (1) {
