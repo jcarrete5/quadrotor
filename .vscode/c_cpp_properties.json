@@ -1,22 +1,39 @@
 {
+    "env": {
+        "definesUno": ["__AVR_ATmega328P__", "F_CPU=16000000UL"],
+        "definesMicro": ["__AVR_ATmega32U4__", "F_CPU=16000000UL"],
+        "defaultIncludePath": ["${workspaceFolder}/include"],
+        "defaultLinuxCompilerPath": "/usr/bin/avr-gcc",
+        "defaultMacCompilerPath": "/usr/local/CrossPack-AVR/bin/avr-gcc"
+    },
     "configurations": [
         {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": ["__AVR_ATmega328P__"],
-            "compilerPath": "/usr/bin/avr-gcc",
-            "intelliSenseMode": "gcc-x64"
+            "name": "Linux.uno",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesUno}"],
+            "compilerPath": "${defaultLinuxCompilerPath}",
+            "cStandard": "c11"
         },
         {
-            "name": "Mac",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": ["__AVR_ATmega328P__"],
-            "compilerPath": "/usr/local/CrossPack-AVR/bin/avr-gcc",
-            "intelliSenseMode": "gcc-x64"
+            "name": "Linux.micro",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesMicro}"],
+            "compilerPath": "${defaultLinuxCompilerPath}",
+            "cStandard": "c11"
+        },
+        {
+            "name": "Mac.uno",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesUno}"],
+            "compilerPath": "${defaultMacCompilerPath}",
+            "cStandard": "c11"
+        },
+        {
+            "name": "Mac.micro",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesMicro}"],
+            "compilerPath": "${defaultMacCompilerPath}",
+            "cStandard": "c11"
         }
     ],
     "version": 4
