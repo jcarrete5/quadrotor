@@ -178,10 +178,10 @@ endif( AVR_UPLOADTOOL MATCHES avrdude )
 ##########################################################################
 set( CMAKE_CXX_FLAGS "-fno-exceptions"  CACHE STRING "Default C++ flags for all builds" FORCE )
 
-set( CMAKE_C_FLAGS_RELEASE "-O3 -Wall" CACHE STRING "Default C flags for release" FORCE )
+set( CMAKE_C_FLAGS_RELEASE "-O3 -Wall -DNDEBUG" CACHE STRING "Default C flags for release" FORCE )
 set( CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall" CACHE STRING "Default C++ flags for release" FORCE )
 
-set( CMAKE_C_FLAGS_MINSIZEREL "-Os -mcall-prologues -Wall" CACHE STRING "Default C flags for minimum size release" FORCE )
+set( CMAKE_C_FLAGS_MINSIZEREL "-Os -mcall-prologues -Wall -DNDEBUG" CACHE STRING "Default C flags for minimum size release" FORCE )
 set( CMAKE_CXX_FLAGS_MINSIZEREL "-Os -mcall-prologues -Wall" CACHE STRING "Default C++ flags for minimum size release" FORCE )
 
 set( CMAKE_C_FLAGS_DEBUG "-g -Wall" CACHE STRING "Default C flags for debug" FORCE )
