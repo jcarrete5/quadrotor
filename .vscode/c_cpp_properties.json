@@ -1,65 +1,111 @@
 {
     "env": {
-        "definesUno": ["__AVR_ATmega328P__", "F_CPU=16000000UL"],
-        "definesMicro": ["__AVR_ATmega32U4__", "F_CPU=16000000UL"],
-        "defaultIncludePath": ["${workspaceFolder}/include"],
+        "definesUno": [
+            "__AVR_ATmega328P__",
+            "F_CPU=16000000UL"
+        ],
+        "definesMicro": [
+            "__AVR_ATmega32U4__",
+            "F_CPU=16000000UL"
+        ],
+        "defaultIncludePath": [
+            "${workspaceFolder}/include",
+            "/usr/local/CrossPack-AVR/avr/include"
+        ],
         "defaultLinuxCompilerPath": "/usr/bin/avr-gcc",
         "defaultMacCompilerPath": "/usr/local/CrossPack-AVR/bin/avr-gcc"
     },
     "configurations": [
         {
             "name": "Linux.uno [RELEASE]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesUno}", "NDEBUG"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesUno}",
+                "NDEBUG"
+            ],
             "compilerPath": "${defaultLinuxCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Linux.micro [RELEASE]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesMicro}", "NDEBUG"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesMicro}",
+                "NDEBUG"
+            ],
             "compilerPath": "${defaultLinuxCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Linux.uno [DEBUG]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesUno}"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesUno}"
+            ],
             "compilerPath": "${defaultLinuxCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Linux.micro [DEBUG]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesMicro}"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesMicro}"
+            ],
             "compilerPath": "${defaultLinuxCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Mac.uno [RELEASE]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesUno}", "NDEBUG"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesUno}",
+                "NDEBUG"
+            ],
             "compilerPath": "${defaultMacCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Mac.micro [RELEASE]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesMicro}", "NDEBUG"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesMicro}",
+                "NDEBUG"
+            ],
             "compilerPath": "${defaultMacCompilerPath}",
             "cStandard": "c11"
         },
         {
             "name": "Mac.uno [DEBUG]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesUno}"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesUno}"
+            ],
             "compilerPath": "${defaultMacCompilerPath}",
-            "cStandard": "c11"
+            "cStandard": "c11",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         },
         {
             "name": "Mac.micro [DEBUG]",
-            "includePath": ["${defaultIncludePath}"],
-            "defines": ["${definesMicro}"],
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "defines": [
+                "${definesMicro}"
+            ],
             "compilerPath": "${defaultMacCompilerPath}",
             "cStandard": "c11"
         }
