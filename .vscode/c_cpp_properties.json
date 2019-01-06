@@ -8,6 +8,20 @@
     },
     "configurations": [
         {
+            "name": "Linux.uno [RELEASE]",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesUno}", "NDEBUG"],
+            "compilerPath": "${defaultLinuxCompilerPath}",
+            "cStandard": "c11"
+        },
+        {
+            "name": "Linux.micro [RELEASE]",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesMicro}", "NDEBUG"],
+            "compilerPath": "${defaultLinuxCompilerPath}",
+            "cStandard": "c11"
+        },
+        {
             "name": "Linux.uno [DEBUG]",
             "includePath": ["${defaultIncludePath}"],
             "defines": ["${definesUno}"],
@@ -25,6 +39,13 @@
             "name": "Mac.uno [RELEASE]",
             "includePath": ["${defaultIncludePath}"],
             "defines": ["${definesUno}", "NDEBUG"],
+            "compilerPath": "${defaultMacCompilerPath}",
+            "cStandard": "c11"
+        },
+        {
+            "name": "Mac.micro [RELEASE]",
+            "includePath": ["${defaultIncludePath}"],
+            "defines": ["${definesMicro}", "NDEBUG"],
             "compilerPath": "${defaultMacCompilerPath}",
             "cStandard": "c11"
         },
